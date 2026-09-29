@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학습 퀴즈</title>
+    <script>
+        window.onload = function(){
+            let btn1 = document.getElementsByClassName('btn1')[0];
+            let btn2 = document.getElementsByClassName('btn2')[0];
+            let btn3 = document.getElementsByClassName('btn3')[0];
+            let btn4 = document.getElementsByClassName('btn4')[0];
+
+            let result1 = document.getElementById('result1');
+            let result2 = document.getElementById('result2');
+
+            let count1 = 0;
+            let count2 = 0;
+            let count3 = 0;
+            let count4 = 0;
+
+            btn1.addEventListener('click', function(){
+                if(count1 == 0){
+                    result1.innerHTML = "오답: html은 모바일용이 아니다.";
+                    count1 = 1;
+                } else {
+                    result1.innerHTML = "";
+                    count1 = 0;
+                }
+            });
+
+            btn2.addEventListener('click', function(){
+                if(count2 == 0){
+                    result2.innerHTML = "정답: 기능상 차이가 없으며 둘 다 HTML 파일이다.";
+                    count2 = 1;
+                } else {
+                    result2.innerHTML = "";
+                    count2 = 0;
+                }
+            });
+
+            btn3.addEventListener('click', function(){
+                if(count3 == 0){
+                    result3.innerHTML = "오답: 속도나 유/무료의 차이가 아니다.";
+                    count3 = 1;
+                } else {
+                    result3.innerHTML = "";
+                    count3 = 0;
+                }
+            });
+
+            btn4.addEventListener('click', function(){
+                if(count4 == 0){
+                    result4.innerHTML = "정답: HTTPS는 암호화가 적용되어 안전하다.";
+                    count4 = 1;
+                } else {
+                    result4.innerHTML = "";
+                    count4 = 0;
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div>
+        <h3>1. html과 htm의 차이점이 무엇인가?</h3>
+        <div class="btn1" style="cursor:pointer; margin:5px 0;">1. html은 웹용, htm은 모바일용이다.</div>
+        <div class="btn2" style="cursor:pointer; margin:5px 0;">2. 기능상 차이가 없으며 둘 다 동일한 웹 문서 파일이다.</div>
+        <div id="result1"></div>
+        <div id="result2"></div>
+    </div>
+
+    <hr style="margin: 20px 0;">
+
+    <div>
+        <h3>2. http와 https의 차이점이 무엇인가?</h3>
+        <div class="btn3" style="cursor:pointer; margin:5px 0;">1. HTTP는 유료이고, HTTPS는 무료이다.</div>
+        <div class="btn4" style="cursor:pointer; margin:5px 0;">2. HTTPS는 보안(암호화)이 적용되어 안전하고, HTTP는 아니다.</div>
+        <div id="result3"></div>
+        <div id="result4"></div>
+    </div>
+
+</body>
+</html>
